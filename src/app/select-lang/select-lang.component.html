@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color = "secondary">
+    <ion-title style="font-size: 20px;">
+     Select Language
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row>
+      <ion-col size="2">
+      </ion-col>
+        <ion-col size="8">
+
+    <ion-card>
+        <ion-item color= "secondary" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+         <img style="width: 35px;"  src="assets/uzb.png" alt="">  O'zbekcha
+        </ion-item>
+        </ion-card>
+        <ion-card>
+            <ion-item color= "secondary" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+              <img style="width: 45px"  src="assets/rus.png" alt=""> Русский
+            </ion-item>
+            </ion-card>
+            <ion-card>
+                <ion-item color= "secondary" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+                  <img style="width: 35px"  src="assets/eng.jpg" alt=""> English
+                </ion-item>
+                </ion-card>
+                </ion-col>
+                <ion-col size="2" >
+                </ion-col>
+                </ion-row>
+
+               
+        <img src="assets/003.png" alt="">
+
+        <ion-card color="secondary">
+            <h1>
+            <ion-icon name="flame" style=" color: red;"></ion-icon>
+              Electron Guide</h1>
+            </ion-card>
+  </ion-content>

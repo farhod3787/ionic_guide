@@ -1,0 +1,52 @@
+<ion-toolbar color="secondary">
+    <ion-title>All Hotels in Tashkent</ion-title>
+  </ion-toolbar>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3">
+          <ion-card *ngFor = "let hotel of hotels"> 
+              <ion-card-content routerLink = "/selectHotel/{{hotel._id}}">
+                  <ion-item>
+                     <img src="http://localhost:5000/images/{{hotel.image}}" alt="">
+                      </ion-item>
+                      <ion-item>
+                          <h3>«INTERNATIONAL HOTEL TASHKENT» – is a choice of tourists and business travelers who appreciate a high level of service and comfort.</h3>
+                          </ion-item>
+                </ion-card-content>
+            </ion-card>
+
+
+        <ion-card> 
+          <ion-card-content>
+              <ion-item>
+                 <img src="assets/hotel1.png" alt="">
+                  </ion-item>
+                  <ion-item>
+                      <h3>«INTERNATIONAL HOTEL TASHKENT» – is a choice of tourists and business travelers who appreciate a high level of service and comfort.</h3>
+                      </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                   <img src="assets/hotel2.jpg" alt="">
+                    </ion-item>
+                    <ion-item>
+                        <h3>The Sheraton Hotel, now the City Palace, was built in 1998 according to the International Standards of the 5 ***** Sheraton Hotels network.</h3>
+                        </ion-item>
+              </ion-card-content>
+          </ion-card>
+         
+
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+
+        <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+            <ion-fab-button color="secondary" routerLink="/home">
+                <ion-icon name="arrow-round-back"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+ 
+</ion-content>
