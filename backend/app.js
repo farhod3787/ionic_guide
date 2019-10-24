@@ -12,6 +12,11 @@ const app = express();
 
 app.use(cors());
 
+// mongoose.connect('mongodb+srv://farhod:7Q8SfcHx.F2J.HG@cluster0-uf7cc.mongodb.net/online-pharmacy?retryWrites=true', { useNewUrlParser: true })
+//     .then(() => {
+//         console.log('MongoDB connected.');
+//     })
+//     .catch(err => console.log(err));
 
 mongoose.connect("mongodb://localhost:27017/ionic-test").then( () => {
     console.log('Connected to database')

@@ -7,7 +7,10 @@ var hotel = mongoose.Schema({
     dislike: {type: Number},
     distance: {type: Number},
     price: {type: String},
-    information : {type: String}
+    information : {type: String},
+    tarif : { type: Array},     
+    comfort: { type: Array},
+    sharoit : { type: Array}
 
 })
 

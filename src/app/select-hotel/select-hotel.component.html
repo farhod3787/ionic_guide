@@ -3,14 +3,12 @@
  </ion-toolbar>
 
 <ion-content>
-      <ion-card> 
-            <ion-card-content >
+      <!-- <ion-card>  -->
+            <!-- <ion-card-content > -->
                 <ion-item>
                    <img src="http://localhost:5000/images/{{hotel.image}}" alt="">
                     </ion-item>
-                    <ion-item>
-                        <h3>{{hotel.information}}</h3>
-                        </ion-item>
+                    
                         <ion-item>
                             <ion-grid>
                                 <ion-row>
@@ -29,8 +27,22 @@
                                     </ion-row>
                                     </ion-grid>
                            </ion-item>
-              </ion-card-content>
-          </ion-card>
+                           <ion-item>
+                                <h6>{{hotel.information}}</h6>
+                                </ion-item>
+                           <ion-item>
+                               <ion-card>
+                                <ion-grid>
+                                    <h3>Family apartment</h3>
+                                         
+                                <ion-icon name="checkmark" style="font-size: 50px; color: green"></ion-icon>
+                               
+                               
+                                </ion-grid>
+                                </ion-card>
+                               </ion-item>
+              <!-- </ion-card-content> -->
+          <!-- </ion-card> -->
 
 
 
