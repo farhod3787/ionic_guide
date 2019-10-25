@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TestComponent } from './test/test.component';
 import { SelectLangComponent } from './select-lang/select-lang.component';
 import { SelectHotelComponent } from './select-hotel/select-hotel.component';
+import { AboutHotelComponent } from './about-hotel/about-hotel.component';
 
 
 
@@ -21,7 +22,8 @@ import { SelectHotelComponent } from './select-hotel/select-hotel.component';
     AppComponent,
     TestComponent,
     SelectLangComponent,
-    SelectHotelComponent
+    SelectHotelComponent,
+    AboutHotelComponent
   ],
   entryComponents: [],
   imports: [

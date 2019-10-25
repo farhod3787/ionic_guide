@@ -11,7 +11,7 @@
                     
                         <ion-item>
                             <ion-grid>
-                                <ion-row>
+                                <!-- <ion-row>
                             <ion-col size='8'>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
@@ -23,10 +23,32 @@
                                         1 <ion-icon name="thumbs-down"></ion-icon>
                                         <ion-icon name="thumbs-up"></ion-icon> 2
                            </ion-col>
-                                        
-                                    </ion-row>
+                                    </ion-row> -->
+                                    <ion-row>
+                                    <ion-tabs>
+                                            <ion-tab-bar slot="bottom">
+            
+                                              <ion-tab-button tab="a">
+                                                <ion-icon name="calendar"></ion-icon>
+                                                <ion-label>Schedule</ion-label>
+                                              </ion-tab-button>
+                                          
+                                              <ion-tab-button tab="about">
+                                                <ion-icon name="contacts"></ion-icon>
+                                                <ion-label>About Hotel</ion-label>
+                                              </ion-tab-button>
+                                          
+                                              <ion-tab-button >
+                                                <ion-icon name="map"></ion-icon>
+                                                <ion-label>Map</ion-label>
+                                              </ion-tab-button>
+                                          
+                                            </ion-tab-bar>
+                                          </ion-tabs>
+                                          </ion-row>
                                     </ion-grid>
                            </ion-item>
+
                            <ion-item>
                                 <h6>{{hotel.information}}</h6>
                                 </ion-item>
@@ -34,16 +56,17 @@
                                <ion-card>
                                 <ion-grid>
                                     <h3>Family apartment</h3>
-                                         
-                                <ion-icon name="checkmark" style="font-size: 50px; color: green"></ion-icon>
-                               
-                               
                                 </ion-grid>
                                 </ion-card>
                                </ion-item>
+
               <!-- </ion-card-content> -->
           <!-- </ion-card> -->
 
-
+          <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+                <ion-fab-button color="secondary" routerLink="/test">
+                    <ion-icon name="arrow-round-back"></ion-icon>
+                </ion-fab-button>
+              </ion-fab>
 
 </ion-content>
