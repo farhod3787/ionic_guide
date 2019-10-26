@@ -1,0 +1,85 @@
+<ion-toolbar color="secondary">
+  <ion-title>{{restaraun.name}}</ion-title>
+</ion-toolbar>
+
+<ion-content>
+     <!-- <ion-card>  -->
+           <!-- <ion-card-content > -->
+               <ion-item>
+                  <img src="http://localhost:5000/images/{{restaraun.image}}" alt="">
+                   </ion-item>
+                   
+                       <ion-item>
+                           <ion-grid>
+                               <ion-row>
+                           <ion-col size='8'>
+                              <h4> {{restaraun.distance}} km. of Center</h4>
+                               <!-- <ion-icon style="color: gold; font-size: 24px " name="star"></ion-icon>
+                               <ion-icon style="color: gold; font-size: 24px " name="star"></ion-icon>
+                               <ion-icon style="color: gold; font-size: 24px " name="star"></ion-icon>
+                               <ion-icon style="color: gold; font-size: 24px " name="star"></ion-icon>
+                               <ion-icon style="color: gold; font-size: 24px " name="star"></ion-icon> -->
+                           </ion-col>
+                           <ion-col size='4'>
+                                       {{restaraun.dislike}} 
+                                       <ion-icon style="color: red; font-size: 24px " name="thumbs-down"></ion-icon>
+                                       <ion-icon style="color: blue; font-size: 24px " name="thumbs-up"></ion-icon> 
+                                       {{restaraun.like}}
+                          </ion-col>
+                                   </ion-row>
+                                   </ion-grid>
+                          </ion-item>
+
+
+                          <ion-item>
+                               <h6>{{restaraun.information}}</h6>
+                               </ion-item>
+
+                               <ion-item>
+                                  <ion-grid>
+                                      <h3>Special</h3>
+                                      <h5 >
+                                  <ion-icon style="color: green; font-size: 24px " name="ribbon"></ion-icon>
+                                        {{restaraun.special}}</h5>
+                                  </ion-grid>
+                                 </ion-item>
+
+                               <ion-item>
+                               <ion-grid>
+                                   <h3>Menu</h3>
+                                   <h5 *ngFor = "let con of restaraun.menu">
+                               <ion-icon style="color: green; font-size: 24px " name="restaurant"></ion-icon>
+                                     {{con}}</h5>
+                               </ion-grid>
+                              </ion-item>
+
+
+
+                              <ion-item>
+                                <ion-row>
+                                  <ion-col>
+                                 <ion-grid>
+                                     <h3> <ion-icon style="color: blue; font-size: 24px "  name="call"></ion-icon>  Contact</h3>
+                                     <h5 *ngFor = "let con of restaraun.contact">{{con}}</h5>
+                                 </ion-grid>
+                                 </ion-col>
+                                 <ion-col>
+                                   <ion-grid>
+                                     <h3> <ion-icon style="color: red ; font-size: 24px " name="pin"></ion-icon> Address</h3>
+                                   <h5>{{restaraun.address}}</h5>
+                                   </ion-grid>
+                                   </ion-col>
+                                 </ion-row>
+                                
+                                </ion-item>
+
+             <!-- </ion-card-content> -->
+         <!-- </ion-card> -->
+
+         <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+               <ion-fab-button color="secondary" routerLink="/restaurant">
+                   <ion-icon name="arrow-round-back"></ion-icon>
+               </ion-fab-button>
+             </ion-fab>
+
+</ion-content>

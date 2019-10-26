@@ -17,7 +17,7 @@ import { TestComponent } from '../test/test.component';
       {
         path: '',
         component: HomePage
-      }
+      } 
     ])
   ],
   declarations: [HomePage]

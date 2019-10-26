@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const Hotel = require('../moduls/hotels')
+const Restoran = require('../moduls/restoran')
 
 const multer = require('multer');
 
@@ -31,21 +31,22 @@ const storage = multer.diskStorage({
 router.post('/create', multer({ storage: storage }).single('image'), (request, response) =>{
     var body = request.body;
     const file = request.file;
-    var hotel = {
+    var restoran = {
         name: body.name,
         image: file.filename,
         like: body.like,
         dislike: body.dislike,
         distance: body.distance,
-        price: body.price,
         information: body.information,
-        sharoit: body.sharoit,
+        menu: body.menu,
         contact: body.contact,
-        address: body.address
+        address: body.address,
+        work_time: body.work_time,
+        special: body.special
     }
-    console.log(hotel)
-    var hotel = new Hotel(hotel);
-    hotel.save().then( doc =>{
+    console.log(restoran)
+    var restoran = new Restoran(restoran);
+    restoran.save().then( doc =>{
         response.send(doc)
     }).catch( err =>{
         response.status(400).json(err)    
@@ -53,11 +54,11 @@ router.post('/create', multer({ storage: storage }).single('image'), (request, r
 })
 
 router.get('/getall', async (request, response) =>{
-    let hotel = await Hotel.find();
-    if (hotel.image) {
-        hotel.image = "/images/" + hotel.image;
+    let restoran = await Restoran.find();
+    if (restoran.image) {
+        restoran.image = "/images/" + restoran.image;
     }
-    response.status(200).json(hotel)
+    response.status(200).json(restoran)
 
     // Hotel.find().then( res =>{
     //     response.status(200).json(res)
@@ -68,7 +69,7 @@ router.get('/getall', async (request, response) =>{
 
 router.get('/get/:id', (request, response) => {
         var id = request.params.id;
-        Hotel.findById(id).then(res =>{
+        Restoran.findById(id).then(res =>{
                 response.status(200).json(res)
          }).catch ( err =>{
              console.log(err);
@@ -78,7 +79,7 @@ router.get('/get/:id', (request, response) => {
 
 router.delete('/:id', (request, response) =>{
     var id = request.params.id;
-    Hotel.findByIdAndDelete(id).then( res =>{
+    Restoran.findByIdAndDelete(id).then( res =>{
         if(res) {
             response.status(200).json()
         }

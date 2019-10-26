@@ -1,0 +1,30 @@
+<ion-toolbar color="secondary">
+    <ion-title>Restaurants</ion-title>
+  </ion-toolbar>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="6" offset-lg="3">
+          <ion-card *ngFor = "let res of restarounts"> 
+              <ion-card-content routerLink = "/selectRest/{{res._id}}">
+                  <ion-item>
+                     <img src="http://localhost:5000/images/{{res.image}}" alt="">
+                      </ion-item>
+                      <ion-item>
+                          <h1>{{res.name}}</h1>
+                          </ion-item>
+                </ion-card-content>
+            </ion-card>
+            </ion-col>
+            </ion-row>
+            </ion-grid>
+            
+
+            <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+              <ion-fab-button color="secondary" routerLink="/home">
+                  <ion-icon name="arrow-round-back"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+
+          </ion-content>
+            

@@ -1,20 +1,18 @@
 const mongoose = require('mongoose')
 
-var hotel = mongoose.Schema({
+var restoran = mongoose.Schema({
     name: {type: String}, 
     image: {type : String},
     like : {type: Number},
     dislike: {type: Number},
     distance: {type: Number},
-    price: {type: String},
     information : {type: String},
-    // tarif : { type: Array},     
-    // comfort: { type: Array},
-    sharoit : { type: Array},
+    menu : { type: Array},
     contact: {type: Array},
-    address: {type: String}
-
+    address: {type: String},
+    work_time: {type: String},
+    special: {type: String}
 })
 
 
-module.exports = mongoose.model('hotel', hotel)
+module.exports = mongoose.model('restoran', restoran)

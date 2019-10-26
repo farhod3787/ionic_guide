@@ -18,6 +18,8 @@ export class SelectHotelComponent implements OnInit {
   ) {
    }
 
+    
+
   ngOnInit() {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has("id")) {
